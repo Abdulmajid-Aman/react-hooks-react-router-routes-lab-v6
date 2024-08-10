@@ -14,9 +14,7 @@ function Movie() {
     .then(data => setMovie(data))
   },[id])
 
-//  let genre = movie.genres.map(genreMovie => {
-//   return <span key={genreMovie}>{genreMovie}</span>
-//  })
+ 
 
 
  
@@ -31,7 +29,7 @@ function Movie() {
         {/* Movie info here! */}
         <h1>{movie.title}</h1>
         <p>{movie.time}</p>
-        {/* {genre} */}
+        <span>{movie.genres} </span>
       </main>
     </>
   );
