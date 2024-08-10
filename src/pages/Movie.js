@@ -14,6 +14,11 @@ function Movie() {
     .then(data => setMovie(data))
   },[id])
 
+  const genres = movie.genres ? movie.genres.map(r => { 
+   return <span key={r}>{r}</span>  
+  }
+  ) : null;
+ 
  
 
 
@@ -29,7 +34,7 @@ function Movie() {
         {/* Movie info here! */}
         <h1>{movie.title}</h1>
         <p>{movie.time}</p>
-        <span>{movie.genres} </span>
+        {genres}
       </main>
     </>
   );
